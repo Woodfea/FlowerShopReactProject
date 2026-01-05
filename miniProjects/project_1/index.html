@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr"> 
+    <head>
+        <meta charset="UTF-8">
+        <title>Mon Site Web</title>
+    </head>
+    <body>
+        <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        
+        <div id="root"></div>
+
+        <script type="text/babel"> 
+            function Title(){
+                const title = "Welcome to my Flower Shop!";
+                return <h1>{title.toUpperCase()}</h1>;
+            }
+
+            function Cart(){
+                const items = {"Roses": 8, "Tulips" : 10, "Daisies" : 15};
+                const totalItems = Object.values(items).reduce((a, b) => a + b, 0);
+                const CardTitle = "Shopping Cart";
+                return (
+                    <div>
+                        <h2>{CardTitle}</h2>
+                        <ul>
+                            {Object.entries(items).map(([key, value]) => <li key={key}>{key} : {value}</li>)}
+                        </ul>
+                        <div>
+                            Total items: {totalItems}
+                        </div>
+                    </div>
+                );
+            }
+            ReactDOM.render(<React.Fragment><Title /><Cart /></React.Fragment>, document.getElementById('root'));
+        </script>
+    </body>
+</html>
