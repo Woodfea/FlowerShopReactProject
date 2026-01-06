@@ -1,6 +1,10 @@
+import '../styles/Banner.css';
+
 function Banner() {
     const title = "Welcome to the Flower Shop!";
-    return <h1>{title}</h1>;
+    return <div className="tfs-banner">
+        <h1>{title}</h1>
+    </div>;
 }
 
 export default Banner;
