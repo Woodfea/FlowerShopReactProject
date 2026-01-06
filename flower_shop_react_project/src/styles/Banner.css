@@ -2,6 +2,18 @@
     color: black;
     background-color: #f8f9fa;
     padding: 20px;
-    text-align: center;
     border-bottom: 3px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.tfs-title {
+	padding-left: 32px;
+}
+
+.tfs-logo {
+    height: 60px;
+    width: auto;
 }
