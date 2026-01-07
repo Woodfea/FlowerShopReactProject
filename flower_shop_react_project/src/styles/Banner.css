@@ -1,8 +1,15 @@
 .tfs-banner {
     color: black;
     background-color: #f8f9fa;
-    padding: 20px;
+    padding: 10px;
     border-bottom: 3px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tfs-banner-row {
     display: flex;
     flex-direction: row;
     justify-content: center;
