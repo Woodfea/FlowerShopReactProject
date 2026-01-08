@@ -1,6 +1,6 @@
 import { plantList } from "../datas/plantList";
 import '../styles/ShoppingList.css';
-import CareScale from "./CareScale";
+import PlantItem from "./PlantItem";
 
 function ShoppingList() {
     // const categories = plantList.reduce((acc, plant) => {
@@ -18,13 +18,14 @@ function ShoppingList() {
         </ul>
         <ul>
             {plantList.map((plant) => (
-                <li key={plant.id}>
-                    {plant.name}
-                    {plant.isBestSale && <span>🔥</span>}
-                    {plant.isSpecialOffer && <span className="tfs-sales">SALE 25% OFF</span>}
-                    <CareScale careType='water' scaleValue={plant.water} />
-                    <CareScale careType='light' scaleValue={plant.light} />
-                </li>))}
+                    <PlantItem
+                        key={plant.id}
+                        id={plant.id} 
+                        name={plant.name}
+                        cover={plant.cover}
+                        water={plant.water}
+                        light={plant.light}
+                    />))}
         </ul>
     </div>);
 }
