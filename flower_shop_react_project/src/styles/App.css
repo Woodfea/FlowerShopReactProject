@@ -36,3 +36,8 @@
     transform: rotate(360deg);
   }
 }
+
+.tfs-layout-inner {
+	display: flex;
+	flex-direction: row;
+}
